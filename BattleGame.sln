@@ -3,7 +3,31 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.779
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BattleGame.UI", "BattleGame.UI\BattleGame.UI.csproj", "{7285CF07-CAF9-46C7-B825-92A048CB8EE1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BattleGame.Domain", "BattleGame.Domain\BattleGame.Domain.csproj", "{09E6DEEA-73D5-4BEC-98C3-F78ADE57A678}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BattleGame.Tests", "BattleGame.Tests\BattleGame.Tests.csproj", "{5F1CDE7B-0659-4898-A1EE-F987E08C6013}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7285CF07-CAF9-46C7-B825-92A048CB8EE1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7285CF07-CAF9-46C7-B825-92A048CB8EE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7285CF07-CAF9-46C7-B825-92A048CB8EE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7285CF07-CAF9-46C7-B825-92A048CB8EE1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09E6DEEA-73D5-4BEC-98C3-F78ADE57A678}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09E6DEEA-73D5-4BEC-98C3-F78ADE57A678}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09E6DEEA-73D5-4BEC-98C3-F78ADE57A678}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09E6DEEA-73D5-4BEC-98C3-F78ADE57A678}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F1CDE7B-0659-4898-A1EE-F987E08C6013}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F1CDE7B-0659-4898-A1EE-F987E08C6013}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F1CDE7B-0659-4898-A1EE-F987E08C6013}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F1CDE7B-0659-4898-A1EE-F987E08C6013}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
