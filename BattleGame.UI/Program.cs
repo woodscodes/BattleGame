@@ -10,6 +10,11 @@ namespace BattleGame.UI
     {
         static void Main(string[] args)
         {
+            // v1 notes - console application 
+
+            // instance of battle engine
+
+            // inside battle engine two entities (hero / monster) fight to the death  
         }
     }
 }

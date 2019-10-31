@@ -41,10 +41,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Contracts\IPopulate.cs" />
+    <Compile Include="Entities\Character.cs" />
+    <Compile Include="Entities\Hero.cs" />
+    <Compile Include="Entities\Monster.cs" />
+    <Compile Include="Helpers\CharacterStatsPopulator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Entities\" />
+    <Content Include="Helpers\HelperNotesIdeas.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
