@@ -68,12 +68,21 @@ namespace BattleGame.Tests
         [TestMethod]
         public void CanAssignBaseAttackDamageThroughHelperInterface()
         {
-            IPopulate statsPopulator = new CharacterStatsPopulator();
-
-            int damage = statsPopulator.GetBaseAttackDamage();
+            int damage = 50;
             var hero = new Hero("Bob", 100, 100, damage);
 
             Assert.AreEqual(hero.BaseAttackDamage < 31 || hero.BaseAttackDamage > 22, true);
+        }
+
+        [TestMethod]
+        public void HeroCanCreateAnIntegerValueRepresentingRoundsAttackDamage()
+        {
+            ICharacter hero = new Hero("Meh", 100, 100, 25);
+            ICharacter monster = new Monster("Bob", 100, 44);
+
+            var heroAttackDamage = hero.Attack();
+
+            Assert.AreEqual(26, heroAttackDamage);
         }
     }
 }

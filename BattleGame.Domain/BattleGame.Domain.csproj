@@ -41,15 +41,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Contracts\IPopulate.cs" />
+    <Compile Include="Contracts\IActions.cs" />
+    <Compile Include="Contracts\IDecrementStats.cs" />
+    <Compile Include="Contracts\ICharacter.cs" />
+    <Compile Include="Engine\BattleEngine.cs" />
     <Compile Include="Entities\Character.cs" />
     <Compile Include="Entities\Hero.cs" />
     <Compile Include="Entities\Monster.cs" />
-    <Compile Include="Helpers\CharacterStatsPopulator.cs" />
+    <Compile Include="Helpers\DecrementStats.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Content Include="Engine\EngineIdeas.txt" />
     <Content Include="Helpers\HelperNotesIdeas.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

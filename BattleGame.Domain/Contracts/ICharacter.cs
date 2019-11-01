@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace BattleGame.Domain.Contracts
 {
-    public interface IPopulate
+    public interface ICharacter : IActions
     {
-        int GetBaseAttackDamage();
+        string Name { get; }
+        int HitPoints { get; set; }
+        int BaseAttackDamage { get; }
     }
 }

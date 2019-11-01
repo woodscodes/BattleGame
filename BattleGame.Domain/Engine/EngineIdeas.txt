@@ -1,0 +1,1 @@
+﻿Quick idea: save high scores to text file?
