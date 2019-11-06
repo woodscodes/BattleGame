@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace BattleGame.Domain.Contracts
 {
-    public interface ICharacter : IActions
+    public interface ICharacter
     {
         string Name { get; }
         int HitPoints { get; set; }
+        int ManaPoints { get; set; }
         int BaseAttackDamage { get; }
     }
 }

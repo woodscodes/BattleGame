@@ -18,7 +18,7 @@ namespace BattleGame.Domain.Helpers
 
         public ICharacter DecrementManaPoints(ICharacter character)
         {
-            character.HitPoints--;
+            character.ManaPoints--;
             return character;
         }
     }

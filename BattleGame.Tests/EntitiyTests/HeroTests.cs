@@ -79,8 +79,9 @@ namespace BattleGame.Tests
         {
             ICharacter hero = new Hero("Meh", 100, 100, 25);
             ICharacter monster = new Monster("Bob", 100, 44);
+            IActions actions = RoundActions.Instance;
 
-            var heroAttackDamage = hero.Attack();
+            var heroAttackDamage = actions.Attack(hero);
 
             Assert.AreEqual(26, heroAttackDamage);
         }

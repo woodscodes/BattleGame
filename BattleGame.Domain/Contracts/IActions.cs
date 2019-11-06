@@ -8,8 +8,8 @@ namespace BattleGame.Domain.Contracts
 {
     public interface IActions
     {
-        int Attack();
-        void Block();
+        int Attack(ICharacter character);
+        int Block(int attackDamage);
         void CastSpell();
         void UseItem();
     }

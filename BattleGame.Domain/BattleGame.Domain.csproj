@@ -49,6 +49,7 @@
     <Compile Include="Entities\Hero.cs" />
     <Compile Include="Entities\Monster.cs" />
     <Compile Include="Helpers\DecrementStats.cs" />
+    <Compile Include="Helpers\RoundActions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

@@ -23,6 +23,7 @@ namespace BattleGame.Tests
         {
             var monster = new Monster("Orc", 100, 25);
             //monster.Name = "Bob";
+            monster.ManaPoints = 0;
 
             Assert.AreNotEqual("Bob", monster.Name);
         }

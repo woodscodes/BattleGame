@@ -9,9 +9,7 @@ namespace BattleGame.Domain.Entities
 {
     public class Hero : Character
     {
-        public int ManaPoints { get; }
-
-        public Hero(string name, int hitPoints, int manaPoints, int baseAttackDamage) : base(name, hitPoints, baseAttackDamage)
+        public Hero(string name, int hitPoints, int manaPoints, int baseAttackDamage) : base(name, hitPoints, manaPoints, baseAttackDamage)
         {
             ManaPoints = manaPoints;
         }        

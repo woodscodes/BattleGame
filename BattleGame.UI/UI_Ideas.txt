@@ -1,0 +1,2 @@
+﻿When perhaps we get to the point of implementing an MVC interface for this, I can create pixel art images using this app (free for personal users)
+http://pixelatorapp.com/
