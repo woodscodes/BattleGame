@@ -41,21 +41,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Contracts\IActions.cs" />
-    <Compile Include="Contracts\IDecrementStats.cs" />
+    <Compile Include="Contracts\IChanceActions.cs" />
     <Compile Include="Contracts\ICharacter.cs" />
+    <Compile Include="Contracts\IDefensiveActions.cs" />
+    <Compile Include="Contracts\IOffensiveActions.cs" />
+    <Compile Include="Contracts\IRoundActions.cs" />
     <Compile Include="Engine\BattleEngine.cs" />
     <Compile Include="Entities\Character.cs" />
     <Compile Include="Entities\Hero.cs" />
     <Compile Include="Entities\Monster.cs" />
+    <Compile Include="Helpers\ChanceActions.cs" />
     <Compile Include="Helpers\DecrementStats.cs" />
-    <Compile Include="Helpers\RoundActions.cs" />
+    <Compile Include="Engine\RoundActions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
-  <ItemGroup>
-    <Content Include="Engine\EngineIdeas.txt" />
-    <Content Include="Helpers\HelperNotesIdeas.txt" />
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

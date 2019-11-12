@@ -1,3 +1,0 @@
-﻿Here were going to have some stuff around things like damage / block calculation. By abstracting it I can allow for SRP/OCP and Interfaces practice
-damage / spells / blocking etc is behaviour that is shared by all units in the game, but if we wanted to add for example a boss type, its possible that
-coupling it to the classes would cause problems in testing or extensibility

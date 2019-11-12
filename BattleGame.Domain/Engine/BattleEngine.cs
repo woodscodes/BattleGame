@@ -9,5 +9,11 @@ namespace BattleGame.Domain.Engine
 {
     public class BattleEngine
     {
+        public static readonly BattleEngine Instance = new BattleEngine();
+
+        public void RoundStart(ICharacter hero, ICharacter monster)
+        {
+
+        }
     }
 }

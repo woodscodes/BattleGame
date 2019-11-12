@@ -6,11 +6,8 @@ using System.Threading.Tasks;
 
 namespace BattleGame.Domain.Contracts
 {
-    public interface IActions
+    public interface IDefensiveActions
     {
-        int Attack(ICharacter character);
         int Block(int attackDamage);
-        void CastSpell();
-        void UseItem();
     }
 }

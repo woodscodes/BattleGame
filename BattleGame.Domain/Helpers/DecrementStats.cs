@@ -8,15 +8,15 @@ using System.Threading.Tasks;
 
 namespace BattleGame.Domain.Helpers
 {
-    public class DecrementStats : IDecrementStats
+    public class DecrementStats
     {
-        public ICharacter DecrementHealthPoints(ICharacter character, int damagedInflicted)
+        public static ICharacter DecrementHealthPoints(ICharacter character, int damagedInflicted)
         {
             character.HitPoints -= damagedInflicted;
             return character;
         }
 
-        public ICharacter DecrementManaPoints(ICharacter character)
+        public static ICharacter DecrementManaPoints(ICharacter character)
         {
             character.ManaPoints--;
             return character;

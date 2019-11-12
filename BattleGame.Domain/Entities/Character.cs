@@ -25,7 +25,7 @@ namespace BattleGame.Domain.Entities
         {
             Name = name;
             HitPoints = hitPoints;
-            BaseAttackDamage = baseAttackDamage;           
+            BaseAttackDamage = baseAttackDamage;
         }
     }
 }

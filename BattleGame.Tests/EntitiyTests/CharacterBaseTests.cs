@@ -21,9 +21,8 @@ namespace BattleGame.Tests
         [TestMethod]
         public void CanDecrementHpOfCharacterUsingInterface()
         {
-            ICharacter hero = new Character("Meh", 100, 100, 25);
-            IDecrementStats calculate = new DecrementStats();
-            hero = calculate.DecrementHealthPoints(hero, 0);
+            ICharacter hero = new Character("Meh", 100, 100, 25);            
+            hero = DecrementStats.DecrementHealthPoints(hero, 1);
 
             Assert.AreEqual(99, hero.HitPoints);
         }
@@ -31,8 +30,9 @@ namespace BattleGame.Tests
         [TestMethod]
         public void CanAssignRandomValueToAttack()
         {
+            IChanceActions chanceActions = new ChanceActions();
             ICharacter character = new Character("Blbdfd", 100, 100, 5);
-            IActions actions = RoundActions.Instance;
+            IRoundActions actions = new RoundActions(chanceActions);
 
 
             var attackDamage = actions.Attack(character);
@@ -43,12 +43,12 @@ namespace BattleGame.Tests
         [TestMethod]
         public void CanDecrementStatsBasedOnAttackDamage()
         {
+            IChanceActions chanceActions = new ChanceActions();
             ICharacter character = new Character("bsedrfsdf", 100, 100, 5);
-            IDecrementStats decrementer = new DecrementStats();
-            IActions actions = RoundActions.Instance;
+            IRoundActions actions = new RoundActions(chanceActions);
 
             var attackDamage = actions.Attack(character);
-            character = decrementer.DecrementHealthPoints(character, attackDamage);
+            character = DecrementStats.DecrementHealthPoints(character, attackDamage);
 
             Assert.AreEqual(95, character.HitPoints);
         }
@@ -56,9 +56,10 @@ namespace BattleGame.Tests
         [TestMethod]
         public void CanMitigateDamageBasedOnBlockValue()
         {
+            IChanceActions chanceActions = new ChanceActions();
             ICharacter character = new Character("vdisosdf", 100, 100, 20);
             ICharacter character2 = new Character("monster", 100, 100, 10);
-            IActions actions = RoundActions.Instance;
+            IRoundActions actions = new RoundActions(chanceActions);
 
             var attackDamage = actions.Attack(character);
             var attackDamageAfterBlock = actions.Block(attackDamage);

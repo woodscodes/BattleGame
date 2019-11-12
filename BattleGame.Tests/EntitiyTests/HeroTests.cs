@@ -1,5 +1,6 @@
 ﻿using System;
 using BattleGame.Domain.Contracts;
+using BattleGame.Domain.Engine;
 using BattleGame.Domain.Entities;
 using BattleGame.Domain.Helpers;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -77,9 +78,10 @@ namespace BattleGame.Tests
         [TestMethod]
         public void HeroCanCreateAnIntegerValueRepresentingRoundsAttackDamage()
         {
+            IChanceActions chanceActions = new ChanceActions(); 
             ICharacter hero = new Hero("Meh", 100, 100, 25);
             ICharacter monster = new Monster("Bob", 100, 44);
-            IActions actions = RoundActions.Instance;
+            IRoundActions actions = new RoundActions(chanceActions);
 
             var heroAttackDamage = actions.Attack(hero);
 
