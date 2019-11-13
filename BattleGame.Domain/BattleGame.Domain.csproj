@@ -41,11 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Contracts\IChanceActions.cs" />
     <Compile Include="Contracts\ICharacter.cs" />
     <Compile Include="Contracts\IDefensiveActions.cs" />
     <Compile Include="Contracts\IOffensiveActions.cs" />
-    <Compile Include="Contracts\IRoundActions.cs" />
     <Compile Include="Engine\BattleEngine.cs" />
     <Compile Include="Entities\Character.cs" />
     <Compile Include="Entities\Hero.cs" />

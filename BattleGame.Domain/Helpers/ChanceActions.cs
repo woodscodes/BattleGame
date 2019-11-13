@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace BattleGame.Domain.Helpers
 {
-    public class ChanceActions : IChanceActions
+    public class ChanceActions
     {
         private Random _rand;
         private int _rollValue;

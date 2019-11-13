@@ -1,4 +1,5 @@
 ﻿using BattleGame.Domain.Contracts;
+using BattleGame.Domain.Helpers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,15 +8,13 @@ using System.Threading.Tasks;
 
 namespace BattleGame.Domain.Engine
 {
-    public class RoundActions : IRoundActions
+    public class RoundActions : IOffensiveActions, IDefensiveActions
     {
-        // singleton practice
-        // public static readonly RoundActions Instance = new RoundActions(); use singleton in the battleEngine instantiation?
-        private readonly IChanceActions _chanceActions;
+        private readonly ChanceActions _chanceActions;
 
-        public RoundActions(IChanceActions chanceActions)
+        public RoundActions()
         {
-            _chanceActions = chanceActions;
+            _chanceActions = new ChanceActions();
         }
 
         public int Attack(ICharacter character)

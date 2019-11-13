@@ -30,9 +30,8 @@ namespace BattleGame.Tests
         [TestMethod]
         public void CanAssignRandomValueToAttack()
         {
-            IChanceActions chanceActions = new ChanceActions();
             ICharacter character = new Character("Blbdfd", 100, 100, 5);
-            IRoundActions actions = new RoundActions(chanceActions);
+            IRoundActions actions = new RoundActions();
 
 
             var attackDamage = actions.Attack(character);
@@ -43,9 +42,9 @@ namespace BattleGame.Tests
         [TestMethod]
         public void CanDecrementStatsBasedOnAttackDamage()
         {
-            IChanceActions chanceActions = new ChanceActions();
+           
             ICharacter character = new Character("bsedrfsdf", 100, 100, 5);
-            IRoundActions actions = new RoundActions(chanceActions);
+            IRoundActions actions = new RoundActions();
 
             var attackDamage = actions.Attack(character);
             character = DecrementStats.DecrementHealthPoints(character, attackDamage);
@@ -56,10 +55,10 @@ namespace BattleGame.Tests
         [TestMethod]
         public void CanMitigateDamageBasedOnBlockValue()
         {
-            IChanceActions chanceActions = new ChanceActions();
+            
             ICharacter character = new Character("vdisosdf", 100, 100, 20);
             ICharacter character2 = new Character("monster", 100, 100, 10);
-            IRoundActions actions = new RoundActions(chanceActions);
+            IRoundActions actions = new RoundActions();
 
             var attackDamage = actions.Attack(character);
             var attackDamageAfterBlock = actions.Block(attackDamage);

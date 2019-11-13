@@ -54,6 +54,7 @@
     <Compile Include="EntitiyTests\HeroTests.cs" />
     <Compile Include="EntitiyTests\MonsterTests.cs" />
     <Compile Include="EntitiyTests\CharacterBaseTests.cs" />
+    <Compile Include="UITests\DisplayingStats.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

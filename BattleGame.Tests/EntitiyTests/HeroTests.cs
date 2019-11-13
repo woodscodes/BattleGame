@@ -78,10 +78,9 @@ namespace BattleGame.Tests
         [TestMethod]
         public void HeroCanCreateAnIntegerValueRepresentingRoundsAttackDamage()
         {
-            IChanceActions chanceActions = new ChanceActions(); 
             ICharacter hero = new Hero("Meh", 100, 100, 25);
             ICharacter monster = new Monster("Bob", 100, 44);
-            IRoundActions actions = new RoundActions(chanceActions);
+            IRoundActions actions = new RoundActions();
 
             var heroAttackDamage = actions.Attack(hero);
 
