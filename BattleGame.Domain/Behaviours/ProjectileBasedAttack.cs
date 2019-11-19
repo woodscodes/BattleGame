@@ -1,4 +1,5 @@
 ﻿using BattleGame.Domain.Contracts;
+using BattleGame.Domain.Helpers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,9 +10,17 @@ namespace BattleGame.Domain.Behaviours
 {
     public class ProjectileBasedAttack : IAttack
     {
-        public void Attack()
+        IDice dice;
+
+        public ProjectileBasedAttack()
         {
-            Console.WriteLine("Whoa a scary fireball");
+            dice = new TwoSixSideDiceRoll();
+        }
+
+        public int Attack(int baseAttackDamage)
+        {
+            baseAttackDamage = dice.Roll(baseAttackDamage, baseAttackDamage + 10);
+            return baseAttackDamage;
         }
     }
 }

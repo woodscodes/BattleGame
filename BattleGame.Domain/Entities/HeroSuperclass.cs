@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace BattleGame.Domain.Entities
 {
-    public class HeroSuperclass
+    public class HeroSuperclass : ICharacter
     {
         public string Name { get; set; }
         public int HitPoints { get; set; }
-        public int ManaPoints { get; set; }
+        public int ManaPoints { get; set;  }
         public int BaseAttackDamage { get; set; }
 
         // instance variables
@@ -23,14 +23,14 @@ namespace BattleGame.Domain.Entities
             Name = name;
         }
 
-        public void Attack()
+        public int PerformAttack()
         {
-            AttackBehaviour.Attack();
+            return AttackBehaviour.Attack(BaseAttackDamage);
         }
 
-        public void Defend()
+        public void PerformBlock(int damageRecieved)
         {
-            DefendBehaviour.Block();
+            DefendBehaviour.Block(damageRecieved);
         }
 
     }

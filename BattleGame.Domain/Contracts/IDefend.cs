@@ -8,6 +8,6 @@ namespace BattleGame.Domain.Contracts
 {
     public interface IDefend
     {
-        void Block();
+        double Block(int damageRecieved);
     }
 }

@@ -12,9 +12,9 @@ namespace BattleGame.Tests.BattleEngineTests
         [TestMethod]
         public void CanCreateABattleEngineInstance()
         {
-            ICharacter hero = new Hero("Bob", 100, 100, 25);
-            ICharacter monster = new Monster("Orc", 100, 20);
-            BattleEngine.Instance.RoundStart(hero, monster);
+            ICharacter warrior = new Warrior("Bob");
+            ICharacter orc = new Orc();
+            BattleEngine.Instance.RoundStart(warrior, orc);
         }
     }
 }

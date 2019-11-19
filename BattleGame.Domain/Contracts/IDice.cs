@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace BattleGame.Domain.Contracts
 {
-    public interface IDefensiveActions
+    public interface IDice
     {
-        int Block(int attackDamage);
+        int Roll();
+        int Roll(int lowerBound, int upperBound);
     }
 }

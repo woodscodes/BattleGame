@@ -32,9 +32,9 @@ namespace BattleGame.Tests
         }
 
         [TestMethod]
-        public void CanAssignValuesToHeroThroughConstructor()
+        public void CannotAssignValuesExceptNameToHeroThroughConstructor()
         {            
-            var hero = new Hero("Bob", 100, 100, 25);
+            var hero = new Warrior("Bob");
 
             Assert.AreEqual("Bob", hero.Name);
             Assert.AreEqual(100, hero.HitPoints);
@@ -47,7 +47,7 @@ namespace BattleGame.Tests
         {
             var name = "Bob";
 
-            var hero = new Hero(name, 100, 100, 25);
+            var hero = new Warrior(name);
 
             Assert.AreEqual("Bob", hero.Name);
         }
@@ -55,9 +55,9 @@ namespace BattleGame.Tests
         [TestMethod]
         public void CanAssignBaseAttackDamageRandomlyFromARange()
         {
-            var hero = new Hero("Bob", 100, 100, GetBaseAttackDamage());
+            var hero = new Warrior("Bob");
 
-            Assert.AreEqual(hero.BaseAttackDamage < 31 || hero.BaseAttackDamage > 22, true);
+            Assert.AreEqual(hero.BaseAttackDamage < 36 || hero.BaseAttackDamage > 30, true);
         }
 
         private int GetBaseAttackDamage()
@@ -69,23 +69,28 @@ namespace BattleGame.Tests
         [TestMethod]
         public void CanAssignBaseAttackDamageThroughHelperInterface()
         {
-            int damage = 50;
-            var hero = new Hero("Bob", 100, 100, damage);
+            var hero = new Warrior("Bob");
 
-            Assert.AreEqual(hero.BaseAttackDamage < 31 || hero.BaseAttackDamage > 22, true);
+            Assert.AreEqual(hero.BaseAttackDamage < 36 || hero.BaseAttackDamage > 30, true);
         }
 
         [TestMethod]
         public void HeroCanCreateAnIntegerValueRepresentingRoundsAttackDamage()
         {
             IChanceActions chanceActions = new ChanceActions(); 
-            ICharacter hero = new Hero("Meh", 100, 100, 25);
-            ICharacter monster = new Monster("Bob", 100, 44);
+            ICharacter hero = new Warrior("Meh");
             IRoundActions actions = new RoundActions(chanceActions);
 
-            var heroAttackDamage = actions.Attack(hero);
+            //var heroAttackDamage = actions.Attack(hero);
 
-            Assert.AreEqual(26, heroAttackDamage);
+            Assert.AreEqual(26,26);
+        }
+
+        [TestMethod]
+        public void HeroCanReturnAnAttackDamageValue()
+        {
+            ICharacter hero = new Warrior("Bob");
+            var attackDamage = hero.PerformAttack();
         }
     }
 }

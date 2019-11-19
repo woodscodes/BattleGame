@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace BattleGame.Domain.Entities
 {
+    /*
     public class Character : ICharacter
     {
         public string Name { get; }
@@ -27,5 +28,16 @@ namespace BattleGame.Domain.Entities
             HitPoints = hitPoints;
             BaseAttackDamage = baseAttackDamage;
         }
+
+        public void PerformAttack()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void PerformBlock()
+        {
+            throw new NotImplementedException();
+        }
     }
+    */
 }

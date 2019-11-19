@@ -7,23 +7,23 @@ using System.Threading.Tasks;
 
 namespace BattleGame.Domain.Entities
 {
-    public class MonsterSuperclass
+    public class MonsterSuperclass : ICharacter
     {
-        public string Name { get; set; }
+        public string Name { get; }
         public int HitPoints { get; set; }
-        public int BaseAttackDamage { get; set; }
+        public int BaseAttackDamage { get; }
 
         public IAttack AttackBehaviour;
         public IDefend DefendBehaviour;
 
-        public void PerformAttack()
+        public int PerformAttack()
         {
-            AttackBehaviour.Attack();
+            throw new NotImplementedException();
         }
 
-        public void PerformBlock()
+        public void PerformBlock(int damageRecieved)
         {
-            DefendBehaviour.Block();
+            throw new NotImplementedException();
         }
     }
 }

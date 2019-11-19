@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BattleGame.Domain.Contracts
 {
-    public interface IRoundActions : IDefensiveActions, IOffensiveActions
+    public interface IRoundActions
     {
 
     }

@@ -10,7 +10,9 @@ namespace BattleGame.Domain.Contracts
     {
         string Name { get; }
         int HitPoints { get; set; }
-        int ManaPoints { get; set; }
         int BaseAttackDamage { get; }
+
+        int PerformAttack();
+        void PerformBlock(int damageRecieved);
     }
 }

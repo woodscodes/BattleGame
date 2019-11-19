@@ -8,6 +8,6 @@ namespace BattleGame.Domain.Contracts
 {
     public interface IAttack
     {
-        void Attack();
+        int Attack(int BaseAttackDamage);
     }
 }
