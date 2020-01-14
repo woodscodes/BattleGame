@@ -28,10 +28,9 @@ namespace BattleGame.Domain.Entities
             return AttackBehaviour.Attack(BaseAttackDamage);
         }
 
-        public void PerformBlock(int damageRecieved)
+        public int PerformBlock(int damageRecieved)
         {
-            DefendBehaviour.Block(damageRecieved);
+            return (int)DefendBehaviour.Block(damageRecieved);
         }
-
     }
 }

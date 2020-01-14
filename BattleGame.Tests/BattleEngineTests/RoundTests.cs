@@ -12,9 +12,8 @@ namespace BattleGame.Tests.BattleEngineTests
         [TestMethod]
         public void CanCreateABattleEngineInstance()
         {
-            ICharacter warrior = new Warrior("Bob");
-            ICharacter orc = new Orc();
-            BattleEngine.Instance.RoundStart(warrior, orc);
+            var be = new BattleEngine(new Warrior("Bob"), new Orc());
+            be.Fight();           
         }
     }
 }

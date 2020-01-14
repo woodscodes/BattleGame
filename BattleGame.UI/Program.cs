@@ -1,4 +1,7 @@
-﻿using System;
+﻿using BattleGame.Domain.Contracts;
+using BattleGame.Domain.Engine;
+using BattleGame.Domain.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,11 +13,8 @@ namespace BattleGame.UI
     {
         static void Main(string[] args)
         {
-            // v1 notes - console application 
-
-            // instance of battle engine
-
-            // inside battle engine two entities (hero / monster) fight to the death  
+            var be = new BattleEngine(new Warrior("Bob"), new Orc());
+            be.Fight();
         }
     }
 }

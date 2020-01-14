@@ -13,6 +13,6 @@ namespace BattleGame.Domain.Contracts
         int BaseAttackDamage { get; }
 
         int PerformAttack();
-        void PerformBlock(int damageRecieved);
+        int PerformBlock(int damageRecieved);
     }
 }

@@ -13,7 +13,7 @@ namespace BattleGame.Domain.Entities
         {
             Name = "Orcy";
             HitPoints = 150;
-            BaseAttackDamage = 35;
+            BaseAttackDamage = 25;
 
             AttackBehaviour = new WeaponBasedAttack();
             DefendBehaviour = new ArmouredBlock();

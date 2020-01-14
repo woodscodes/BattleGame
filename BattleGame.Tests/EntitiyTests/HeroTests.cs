@@ -74,17 +74,6 @@ namespace BattleGame.Tests
             Assert.AreEqual(hero.BaseAttackDamage < 36 || hero.BaseAttackDamage > 30, true);
         }
 
-        [TestMethod]
-        public void HeroCanCreateAnIntegerValueRepresentingRoundsAttackDamage()
-        {
-            IChanceActions chanceActions = new ChanceActions(); 
-            ICharacter hero = new Warrior("Meh");
-            IRoundActions actions = new RoundActions(chanceActions);
-
-            //var heroAttackDamage = actions.Attack(hero);
-
-            Assert.AreEqual(26,26);
-        }
 
         [TestMethod]
         public void HeroCanReturnAnAttackDamageValue()

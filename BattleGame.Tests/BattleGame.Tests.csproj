@@ -52,7 +52,6 @@
     <Compile Include="BattleEngineTests\RoundTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="EntitiyTests\HeroTests.cs" />
-    <Compile Include="EntitiyTests\MonsterTests.cs" />
     <Compile Include="EntitiyTests\CharacterBaseTests.cs" />
   </ItemGroup>
   <ItemGroup>

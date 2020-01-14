@@ -18,20 +18,12 @@ namespace BattleGame.Tests
             Assert.IsNotNull(hero);
         }
 
-        [TestMethod]
-        public void CanDecrementHpOfCharacterUsingInterface()
-        {
-            ICharacter hero = new HeroSuperclass("Meh");            
-            hero = DecrementStats.DecrementHealthPoints(hero, 1);
-
-            Assert.AreEqual(99, hero.HitPoints);
-        }
 
         [TestMethod]
         public void CanAssignRandomValueToAttack()
         {
             ICharacter character = new HeroSuperclass("Blbdfd");
-            IRoundActions actions = new RoundActions(chanceActions);
+            //IRoundActions actions = new RoundActions(chanceActions);
 
 
             //var attackDamage = character.PerformAttack();
@@ -42,9 +34,9 @@ namespace BattleGame.Tests
         [TestMethod]
         public void CanDecrementStatsBasedOnAttackDamage()
         {
-            IChanceActions chanceActions = new ChanceActions();
+            //IChanceActions chanceActions = new ChanceActions();
             ICharacter character = new HeroSuperclass("bsedrfsdf");
-            IRoundActions actions = new RoundActions(chanceActions);
+            //IRoundActions actions = new RoundActions(chanceActions);
 
             //var attackDamage = actions.Attack(character);
             //character = DecrementStats.DecrementHealthPoints(character, attackDamage);
@@ -55,10 +47,10 @@ namespace BattleGame.Tests
         [TestMethod]
         public void CanMitigateDamageBasedOnBlockValue()
         {
-            IChanceActions chanceActions = new ChanceActions();
+            //IChanceActions chanceActions = new ChanceActions();
             ICharacter character = new HeroSuperclass("vdisosdf");
             ICharacter character2 = new MonsterSuperclass();
-            IRoundActions actions = new RoundActions(chanceActions);
+            //IRoundActions actions = new RoundActions(chanceActions);
 
             //var attackDamage = actions.Attack(character);
             //var attackDamageAfterBlock = actions.Block(attackDamage);

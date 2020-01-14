@@ -9,21 +9,22 @@ namespace BattleGame.Domain.Entities
 {
     public class MonsterSuperclass : ICharacter
     {
-        public string Name { get; }
+        public string Name { get; set; }
         public int HitPoints { get; set; }
-        public int BaseAttackDamage { get; }
+        public int BaseAttackDamage { get; set; }
 
         public IAttack AttackBehaviour;
         public IDefend DefendBehaviour;
 
         public int PerformAttack()
         {
-            throw new NotImplementedException();
+            return AttackBehaviour.Attack(BaseAttackDamage);
         }
 
-        public void PerformBlock(int damageRecieved)
+        public int PerformBlock(int damageRecieved)
         {
-            throw new NotImplementedException();
+            return (int)DefendBehaviour.Block(damageRecieved);
         }
+
     }
 }

@@ -49,16 +49,13 @@
     <Compile Include="Contracts\ICharacter.cs" />
     <Compile Include="Contracts\IDefend.cs" />
     <Compile Include="Contracts\IDice.cs" />
-    <Compile Include="Contracts\IRoundActions.cs" />
     <Compile Include="Engine\BattleEngine.cs" />
-    <Compile Include="Entities\Character.cs" />
+    <Compile Include="Engine\RoundStats.cs" />
     <Compile Include="Entities\HeroSuperclass.cs" />
     <Compile Include="Entities\Mage.cs" />
     <Compile Include="Entities\MonsterSuperclass.cs" />
     <Compile Include="Entities\Orc.cs" />
     <Compile Include="Entities\Warrior.cs" />
-    <Compile Include="Helpers\DecrementStats.cs" />
-    <Compile Include="Engine\RoundActions.cs" />
     <Compile Include="Helpers\TwoSixSideDiceRoll.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
